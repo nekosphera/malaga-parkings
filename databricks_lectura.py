@@ -2,9 +2,8 @@
 # Lectura de los datos desde el Git folder (haz "Pull" antes para tener la última versión)
 import os, glob
 
-# Ruta del repo dentro del workspace (ajusta tu usuario si hace falta)
-usuario = spark.sql("SELECT current_user()").first()[0]
-repo = f"/Workspace/Users/{usuario}/malaga-parkings"
+# Ruta del repo: la carpeta donde está este notebook (sirve en Git folder y en Jobs)
+repo = os.getcwd()
 
 # --- Última foto ---
 import pandas as pd
